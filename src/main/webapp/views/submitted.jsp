@@ -76,8 +76,9 @@
 <!-- Navigation Bar -->
 <nav>
     <a href="home">Home</a>
-    <a href="viewJobs.jsp">View All Jobs</a>
+    <a href="viewJobs">View All Jobs</a>
     <a href="addJob">Post Another Job</a>
+    <a href="searchJobs">Search Jobs</a>
 </nav>
 
 <!-- Content Section -->
@@ -94,7 +95,7 @@
     </ul>
 
     <div class="button-container">
-        <a href="viewJobs.jsp" class="btn">View All Jobs</a>
+        <a href="viewJobs" class="btn">View All Jobs</a>
     </div>
 </div>
 

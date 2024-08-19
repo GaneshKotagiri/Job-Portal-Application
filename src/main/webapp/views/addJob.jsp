@@ -81,8 +81,9 @@
 
 <nav>
     <a href="home">Home</a>
-    <a href="viewJobs.jsp">View All Jobs</a>
+    <a href="viewJobs">View All Jobs</a>
     <a href="addJob">Post Job</a>
+    <a href="searchJobs">Search Jobs</a>
 </nav>
 
 <div class="myJob-posting-section">

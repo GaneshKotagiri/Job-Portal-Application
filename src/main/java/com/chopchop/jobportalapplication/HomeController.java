@@ -1,15 +1,22 @@
 package com.chopchop.jobportalapplication;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+import com.chopchop.jobportalapplication.model.myJob;
+import com.chopchop.jobportalapplication.service.jobService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    private jobService service;
     @GetMapping({"/","home"})
     public String home(){
 //        System.out.println("this is the new method");
@@ -50,9 +57,31 @@ public class HomeController {
     public String submitJob(@ModelAttribute("job") myJob job) {
         // The "job" object will automatically be populated with form data
         // and will be passed to the view (JSP page)
-
+        service.addJob(job);
         // Forward to the submitted.jsp page
         return "submitted"; // This corresponds to your `submitted.jsp` page
     }
+
+    @GetMapping("/viewJobs")
+    public String viewAllJobs(Model model) {
+        List<myJob> jobs = service.getAllJob();
+
+        model.addAttribute("jobPost", jobs);
+
+        return "viewJobs";
+    }
+    @GetMapping("/searchJobs")
+    public String searchJob(@RequestParam("keyword") String keyword, Model model) {
+        // Fetch the jobs matching the search keyword from the service
+        List<myJob> searchResults = service.searchJobs(keyword);
+        // Add the search results to the model
+        model.addAttribute("jobPost", searchResults);
+        System.out.println("this is the search method in the controller");
+        // Return the search results view
+        return "searchJobs";
+    }
+
+
+
 
 }

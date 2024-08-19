@@ -1,4 +1,4 @@
-package com.chopchop.jobportalapplication;
+package com.chopchop.jobportalapplication.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

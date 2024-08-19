@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -38,18 +37,12 @@ public class HomeController {
 //        String companyName = request.getParameter("companyName");
 //        String jobDescription = request.getParameter("jobDescription");
 //        String minRequirements = request.getParameter("minRequirements");
-//
-//        // Create a new job object and set its properties
 //        myJob job = new myJob();
 //        job.setRole(role);
 //        job.setCompanyName(companyName);
 //        job.setJobDescription(jobDescription);
 //        job.setMinRequirements(minRequirements);
-//
-//        // Add the job object to the model to pass it to the JSP page
 //        model.addAttribute("job", job);
-//
-//        // Forward to the submitted.jsp page
 //        return "submitted"; // This corresponds to your `submitted.jsp` page
 //    }
 
@@ -70,16 +63,14 @@ public class HomeController {
 
         return "viewJobs";
     }
-    @GetMapping("/searchJobs")
-    public String searchJob(@RequestParam("keyword") String keyword, Model model) {
-        // Fetch the jobs matching the search keyword from the service
-        List<myJob> searchResults = service.searchJobs(keyword);
-        // Add the search results to the model
-        model.addAttribute("jobPost", searchResults);
-        System.out.println("this is the search method in the controller");
-        // Return the search results view
-        return "searchJobs";
-    }
+//    @GetMapping("/searchJobs")
+//    public String searchJobs(@RequestParam("keyword") String keyword, Model model) {
+//        List<myJob> searchedJobs = service.searchJobsByKeyword(keyword);
+//        model.addAttribute("jobPost", searchedJobs);
+//        model.addAttribute("keyword", keyword);
+//
+//        return "searchJobs";
+//    }
 
 
 

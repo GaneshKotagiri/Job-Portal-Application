@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class jobService {
-    
+
     @Autowired
     private jobRepo repo;
     public void addJob(myJob job){
@@ -28,5 +28,9 @@ public class jobService {
 //                        job.getLocation().toLowerCase().contains(keyword.toLowerCase()))
 //                .collect(Collectors.toList());
 //    }
+    public List<myJob> searchJob(String role, String location){
+//        System.out.println("this is the method in service class"+role);
+        return repo.searchJob(role,location);
+    }
 
 }

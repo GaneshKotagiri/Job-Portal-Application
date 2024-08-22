@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Job Portal - View Jobs</title>
+    <title>Job Portal - Home</title>
     <!-- Link to External CSS -->
     <link rel="stylesheet" type="text/css" href="../style.css">
     <style>
@@ -41,35 +41,22 @@
             background-color: white;
             margin: 20px;
             border-radius: 5px;
+            text-align: center;
         }
         .content-section h2 {
             margin-top: 0;
         }
-        .job-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-        .job-block {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .job-block h3 {
-            margin-top: 0;
-            color: #007bff;
-        }
-        .job-block p {
-            margin: 10px 0;
+        .btn-container {
+            margin-top: 20px;
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            margin: 10px;
         }
         .btn:hover {
             background-color: #0056b3;
@@ -91,21 +78,7 @@
 
 <!-- Content Section -->
 <div class="content-section">
-    <h2>Available Job Listings</h2>
-
-    <div class="job-grid">
-        <c:forEach var="job" items="${jobPost}">
-            <div class="job-block">
-                <h3>${job.role}</h3>
-                <p><strong>Company Name:</strong> ${job.companyName}</p>
-                <p><strong>Location:</strong> ${job.location}</p>
-                <p><strong>Description:</strong> ${job.jobDescription}</p>
-                <p><strong>Minimum Requirement:</strong> ${job.minRequirements}</p>
-                <a href="applied" class="btn">Apply Now</a>
-            </div>
-        </c:forEach>
-    </div>
-
+    <h2>Applied Successfully ! !</h2>
 </div>
 
 </body>

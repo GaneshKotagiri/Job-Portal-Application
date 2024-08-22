@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class HomeController {
     }
     @GetMapping("/addJob")
      public String addJob(){
-        System.out.println("this is the addJob method");
+//        System.out.println("this is the addJob method");
         return "addJob";
      }
 
@@ -73,6 +74,31 @@ public class HomeController {
 //    }
 
 
+    @GetMapping("/search")
+    public String searchJobs( ){
+//        service.searchJob(role);
+        return "search";
+    }
+//
+//    @GetMapping("/searchHome")
+//    public String searchJobs(@RequestParam("role") String role,@RequestParam("location") String location, Model model) {
+//        List<myJob> searchResults = service.searchJob(role, location);
+//        model.addAttribute("jobPost", searchResults);
+//        model.addAttribute("role", role);
+//        model.addAttribute("location",location);
+//        System.out.println("this is a method in search home");
+//        return "searchHome";
+//    }
+    @GetMapping("/searchHome")
+    public String searchHome(@RequestParam String role,@RequestParam String location, Model model){
+        List<myJob> jobs = service.searchJob(role, location);
+        model.addAttribute("jobPost", jobs);
+//        System.out.println("this is the method in the search"+jobs);
+        return "searchHome";
+    }
 
-
+    @GetMapping("/applied")
+    public String applied(){
+        return "applied";
+    }
 }

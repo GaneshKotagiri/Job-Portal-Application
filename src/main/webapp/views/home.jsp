@@ -353,7 +353,7 @@
     <a href="home">Home</a>
     <a href="viewJobs">View All Jobs</a>
     <a href="addJob">Post a Job</a>
-    <a href="searchJobs">Search Jobs</a>
+    <a href="search">Search Jobs</a>
 </nav>
 
 <!-- Content Section -->
@@ -364,7 +364,7 @@
     <div class="btn-container">
         <a href="viewJobs" class="btn">View Jobs</a>
         <a href="addJob" class="btn">Post a Job</a>
-        <a href="searchJobs" class="btn">Search Jobs</a>
+        <a href="search" class="btn">Search Jobs</a>
     </div>
 </div>
 

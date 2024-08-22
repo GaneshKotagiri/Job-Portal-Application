@@ -83,7 +83,7 @@
     <a href="home">Home</a>
     <a href="viewJobs">View All Jobs</a>
     <a href="addJob">Post Job</a>
-    <a href="searchJobs">Search Jobs</a>
+    <a href="search">Search Jobs</a>
 </nav>
 
 <div class="myJob-posting-section">

@@ -50,6 +50,19 @@
             padding: 10px;
             margin-bottom: 10px;
         }
+        .search-section input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .search-section input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
         .filter-section {
             padding: 20px;
             background-color: white;
@@ -123,7 +136,7 @@
     <h2>Search Jobs</h2>
     <form action="searchHome" method="get">
         <input type="text" name="role" placeholder="Enter keyword..." required />
-        <input type="text" name="location" placeholder="Enter location..." required />
+<%--        <input type="text" name="location" placeholder="Enter location..." required />--%>
         <div class="button-container">
             <input type="submit" value="Search" />
         </div>

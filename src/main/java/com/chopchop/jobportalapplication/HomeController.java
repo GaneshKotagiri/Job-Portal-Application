@@ -64,34 +64,17 @@ public class HomeController {
 
         return "viewJobs";
     }
-//    @GetMapping("/searchJobs")
-//    public String searchJobs(@RequestParam("keyword") String keyword, Model model) {
-//        List<myJob> searchedJobs = service.searchJobsByKeyword(keyword);
-//        model.addAttribute("jobPost", searchedJobs);
-//        model.addAttribute("keyword", keyword);
 //
-//        return "searchJobs";
-//    }
-
 
     @GetMapping("/search")
     public String searchJobs( ){
 //        service.searchJob(role);
         return "search";
     }
-//
-//    @GetMapping("/searchHome")
-//    public String searchJobs(@RequestParam("role") String role,@RequestParam("location") String location, Model model) {
-//        List<myJob> searchResults = service.searchJob(role, location);
-//        model.addAttribute("jobPost", searchResults);
-//        model.addAttribute("role", role);
-//        model.addAttribute("location",location);
-//        System.out.println("this is a method in search home");
-//        return "searchHome";
-//    }
+
     @GetMapping("/searchHome")
-    public String searchHome(@RequestParam String role,@RequestParam String location, Model model){
-        List<myJob> jobs = service.searchJob(role, location);
+    public String searchHome(@RequestParam String role, Model model){
+        List<myJob> jobs = service.searchJob(role);
         model.addAttribute("jobPost", jobs);
 //        System.out.println("this is the method in the search"+jobs);
         return "searchHome";
@@ -101,4 +84,13 @@ public class HomeController {
     public String applied(){
         return "applied";
     }
+//    @GetMapping("/update")
+//    public String update(){
+//        return "update";
+//    }
+//
+//    @GetMapping("/delete")
+//    public String delete(){
+//        return "delete";
+//    }
 }

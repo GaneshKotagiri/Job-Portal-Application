@@ -88,6 +88,7 @@
 
     <ul class="job-details">
         <li><strong>Role:</strong> ${job.role}</li>
+<%--        <li><strong>Id:</strong> ${job.id}</li>--%>
         <li><strong>Company Name:</strong> ${job.companyName}</li>
         <li><strong>Location:</strong> ${job.location}</li>
         <li><strong>Job Description:</strong> ${job.jobDescription}</li>
@@ -101,38 +102,3 @@
 
 </body>
 </html>
-<%--&lt;%&ndash;-------------------------------------------------------------%>
-
-<%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>
-<%--<!DOCTYPE html>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <meta charset="UTF-8">--%>
-<%--    <title>Job Portal - Job Details</title>--%>
-<%--    <link rel="stylesheet" type="text/css" href="../style.css">&ndash;%&gt;--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--<header>--%>
-<%--    <h1>Job Portal</h1>--%>
-<%--</header>--%>
-
-<%--<!-- Content Section -->--%>
-<%--<div class="content-section">--%>
-<%--    <h2>Job Posted Successfully</h2>--%>
-<%--    <p>The following details have been submitted for the job post:</p>--%>
-
-<%--    <ul class="job-details">--%>
-<%--        <li><strong>Role:</strong> ${job.role}</li>--%>
-<%--        <li><strong>Company Name:</strong> ${job.companyName}</li>--%>
-<%--        <li><strong>Job Description:</strong> ${job.jobDescription}</li>--%>
-<%--        <li><strong>Minimum Requirement:</strong> ${job.minRequirements}</li>--%>
-<%--    </ul>--%>
-
-<%--    <div class="button-container">--%>
-<%--        <a href="viewJobs.jsp" class="btn">View All Jobs</a>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-<%--</body>--%>
-<%--</html>--%>

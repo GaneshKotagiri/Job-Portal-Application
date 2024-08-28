@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @Entity
 public class myJob {
     @Id
+    private long id;
     private String role;
-//    private int id;
     private String companyName;
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)

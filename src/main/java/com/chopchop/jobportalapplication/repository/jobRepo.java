@@ -4,6 +4,8 @@ import com.chopchop.jobportalapplication.model.myJob;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -12,7 +14,9 @@ import java.util.List;
 @Repository
 public interface jobRepo extends JpaRepository<myJob, String> {
 
-    List<myJob> findByRole(String role);
+//    @Query("SELECT job FROM myJob job WHERE job.role = :role")
+//    @Query("SELECT j FROM myJob j WHERE j.location = :location")
+    List<myJob> findByRoleContainingOrLocationContaining(@Param("role") String role,@Param("location") String location);
 
 }
 //@Autowired

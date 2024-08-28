@@ -17,7 +17,7 @@ public class jobService {
     private jobRepo repo;
 
 //   @Getter
-//   private int id=1;
+//   private long id=100;
 
     public void addJob(myJob job){
 //        id++;
@@ -27,9 +27,9 @@ public class jobService {
         return repo.findAll();
     }
 
-    public List<myJob> searchJob(String role){
+    public List<myJob> searchJob(String keyword){
 //        System.out.println("this is the method in service class"+role);
-        return repo.findByRole(role);
+        return repo.findByRoleContainingOrLocationContaining(keyword,keyword);
     }
 
 }

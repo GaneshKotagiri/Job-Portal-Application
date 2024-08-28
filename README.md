@@ -1,11 +1,16 @@
 Job Portal Application
+
 Overview
+
 This job portal application allows users to search for jobs based on specific criteria such as job role and location. The application supports posting new jobs, viewing all jobs, and searching for jobs using a web interface built with Spring Boot and JSP.
 
 Features
+
 Search Jobs: Search for job listings by role and location.
 Post Jobs: Add new job postings to the portal, can also update and delete an already existing job in the database
 View All Jobs: Display all available job postings.
+
+
 Dependencies
 The project utilizes the following dependencies:
 
@@ -18,6 +23,8 @@ Tomcat: Embedded servlet container for running the application.
 Jakarta Servlet: Provides server-side logic for handling HTTP requests and responses.
 JSTL (JavaServer Pages Standard Tag Library): Allows the use of tags in JSP pages to manage and display dynamic data.
 PostgreSQL: Used external database to store and retrieve data
+
+
 Maven Dependencies
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -61,6 +68,7 @@ Maven Dependencies
 Project Structure
 The project follows a standard Spring Boot structure:
 
+
 css
 Copy code
 src/
@@ -80,6 +88,9 @@ Controller: Manages requests and responses.
 Model: Contains the business model (e.g., Job class).
 Repository: Handles data management for jobs using JpaRepository.
 Templates: Contains JSP files for rendering web pages.
+
+
+
 How to Run
 Prerequisites
 Java 8 or higher
@@ -93,6 +104,8 @@ bash
 Copy code
 mvn spring-boot:run
 Access the application in your browser at http://localhost:8080.
+
+
 Endpoints
 /home: Main page of the job portal.
 /viewJobs: Displays all job postings.

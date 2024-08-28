@@ -12,11 +12,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public interface jobRepo extends JpaRepository<myJob, String> {
+public interface jobRepo extends JpaRepository<myJob, Integer> {
 
 //    @Query("SELECT job FROM myJob job WHERE job.role = :role")
 //    @Query("SELECT j FROM myJob j WHERE j.location = :location")
-    List<myJob> findByRoleContainingOrLocationContaining(@Param("role") String role,@Param("location") String location);
+//    Long find
+
+    @Override
+    void deleteById(Integer integer);
+
+    List<myJob> findByRoleContainingOrLocationContaining(@Param("role") String role, @Param("location") String location);
 
 }
 //@Autowired

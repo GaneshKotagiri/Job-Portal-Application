@@ -84,13 +84,23 @@ public class HomeController {
     public String applied(){
         return "applied";
     }
-//    @GetMapping("/update")
-//    public String update(){
-//        return "update";
-//    }
-//
-//    @GetMapping("/delete")
-//    public String delete(){
-//        return "delete";
-//    }
+
+    @GetMapping("/update")
+    public String update(){
+        System.out.println("this is the update method in the application");
+        return "update";
+    }
+
+    @GetMapping("/delete")
+    public String delete(){
+        return "delete";
+    }
+    @PostMapping("/deleted")
+    public String submitJob(Integer id) {
+        // The "job" object will automatically be populated with form data
+        // and will be passed to the view (JSP page)
+        service.deleteJob(id);
+        // Forward to the submitted.jsp page
+        return "deleted"; // This corresponds to your `submitted.jsp` page
+    }
 }

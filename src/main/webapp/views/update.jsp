@@ -84,7 +84,6 @@
     <a href="viewJobs">View All Jobs</a>
     <a href="addJob">Post Job</a>
     <a href="search">Search Jobs</a>
-    <a href="update">Update Job</a>
     <a href="delete">Delete Job</a>
 </nav>
 

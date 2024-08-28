@@ -85,32 +85,17 @@
     <a href="addJob">Post Job</a>
     <a href="search">Search Jobs</a>
     <a href="update">Update Job</a>
-    <a href="delete">Delete Job</a>
 </nav>
 
 <div class="myJob-posting-section">
-    <h2>Post a Job</h2>
-    <form action="submitted" method="post">
-        <label for="role">Job Role:</label>
-        <input type="text" name="role" id="role" placeholder="Enter the job role..." required />
+    <h2>Delete a Job with ID</h2>
+    <form action="deleted" method="post">
 
         <label for="id">Job Id:</label>
         <input type="number" name="id" id="id" placeholder="Enter the job id..." required />
 
-        <label for="companyName">Company Name:</label>
-        <input type="text" name="companyName" id="companyName" placeholder="Enter the company name..." required />
-
-        <label for="location">Location:</label>
-        <input type="text" name="location" id="location" placeholder="Enter the location..." required></input>
-
-        <label for="jobDescription">Job Description:</label>
-        <textarea name="jobDescription" id="jobDescription" placeholder="Enter the job description..." required></textarea>
-
-        <label for="minRequirements">Minimum Requirements:</label>
-        <textarea name="minRequirements" id="minRequirements" placeholder="Enter the minimum requirements..." required></textarea>
-
         <div class="button-container">
-            <input type="submit" value="Post Job" />
+            <input type="submit" value="Delete Job" />
         </div>
     </form>
 </div>

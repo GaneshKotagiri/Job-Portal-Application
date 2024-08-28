@@ -20,6 +20,8 @@ public class jobService {
 //   private long id=100;
 
     public void addJob(myJob job){
+//        Long maxJobNumber = repo.findMaxId();
+//        job.setId(maxJobNumber + 1);
 //        id++;
         repo.save(job);
     }
@@ -30,6 +32,10 @@ public class jobService {
     public List<myJob> searchJob(String keyword){
 //        System.out.println("this is the method in service class"+role);
         return repo.findByRoleContainingOrLocationContaining(keyword,keyword);
+    }
+    public void deleteJob(Integer id){
+
+        repo.deleteById(id);
     }
 
 }

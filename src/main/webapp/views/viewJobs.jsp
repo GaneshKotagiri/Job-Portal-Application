@@ -97,7 +97,7 @@
         <c:forEach var="job" items="${jobPost}">
             <div class="job-block">
                 <h3>${job.role}</h3>
-<%--                <p><strong>Id:</strong> ${job.id}</p>--%>
+                <p><strong>Id:</strong> ${job.id}</p>
                 <p><strong>Company Name:</strong> ${job.companyName}</p>
                 <p><strong>Location:</strong> ${job.location}</p>
                 <p><strong>Description:</strong> ${job.jobDescription}</p>

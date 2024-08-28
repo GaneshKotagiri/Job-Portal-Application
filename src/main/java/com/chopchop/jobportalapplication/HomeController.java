@@ -73,8 +73,8 @@ public class HomeController {
     }
 
     @GetMapping("/searchHome")
-    public String searchHome(@RequestParam String role, Model model){
-        List<myJob> jobs = service.searchJob(role);
+    public String searchHome(@RequestParam String keyword, Model model){
+        List<myJob> jobs = service.searchJob(keyword);
         model.addAttribute("jobPost", jobs);
 //        System.out.println("this is the method in the search"+jobs);
         return "searchHome";

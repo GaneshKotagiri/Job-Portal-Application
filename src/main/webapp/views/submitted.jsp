@@ -88,7 +88,7 @@
 
     <ul class="job-details">
         <li><strong>Role:</strong> ${job.role}</li>
-<%--        <li><strong>Id:</strong> ${job.id}</li>--%>
+        <li><strong>Id:</strong> ${job.id}</li>
         <li><strong>Company Name:</strong> ${job.companyName}</li>
         <li><strong>Location:</strong> ${job.location}</li>
         <li><strong>Job Description:</strong> ${job.jobDescription}</li>

@@ -135,7 +135,7 @@
 <div class="search-section">
     <h2>Search Jobs</h2>
     <form action="searchHome" method="get">
-        <input type="text" name="role" placeholder="Enter keyword..." required />
+        <input type="text" name="keyword" placeholder="Enter keyword..." required />
 <%--        <input type="text" name="location" placeholder="Enter location..." required />--%>
         <div class="button-container">
             <input type="submit" value="Search" />

@@ -92,6 +92,9 @@
         <label for="role">Job Role:</label>
         <input type="text" name="role" id="role" placeholder="Enter the job role..." required />
 
+        <label for="id">Job Id:</label>
+        <input type="number" name="id" id="id" placeholder="Enter the job id..." required />
+
         <label for="companyName">Company Name:</label>
         <input type="text" name="companyName" id="companyName" placeholder="Enter the company name..." required />
 

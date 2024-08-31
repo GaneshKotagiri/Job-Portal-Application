@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component;
 @Entity
 public class myJob {
     @Id
-    @Column(unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true,nullable = false)
     private long id;
     private String role;
     private String companyName;
